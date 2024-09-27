@@ -1,0 +1,12 @@
+design_matrix= zeros(4,147);
+design_matrix(1,:) = first_vector;
+start = zeros(1,147);
+start = Stimuli_start - Stimuli_end(1);
+endd = zeros(1,147);
+endd = Stimuli_end - Stimuli_end(1);
+endd = endd(1,2:147);
+endd(147)=0;
+design_matrix(2,:) = start;
+design_matrix(3,:) = endd;
+design_matrix(4,:) = endd - start;
+design_matrix(4,147)=0.88;
